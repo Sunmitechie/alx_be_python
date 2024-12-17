@@ -12,3 +12,4 @@ print("Subtraction of", number1, " and", numbe2, "is", s)
 m = x * y
 print("Multiplication of", number1, "and", number2, "is", m)
       
+chmod +x basic_python.py
