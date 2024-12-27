@@ -1,5 +1,6 @@
-rows = 4
-columns = 4
+user = int(input("ener the size of the pattern:"))
+rows = user
+columns = user
 for i in range(1, rows + 1):
   # Outer loop controls the number of rows
   for j in range(1, columns + 1):
