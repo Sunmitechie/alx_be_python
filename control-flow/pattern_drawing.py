@@ -1,4 +1,4 @@
-user = int(input("Ener the size of the pattern:"))
+user = int(input("Enter the size of the pattern:"))
 rows = user
 columns = user
 for i in range(1, rows + 1):
