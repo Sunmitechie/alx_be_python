@@ -1,9 +1,12 @@
-user = int(input("Enter the size of the pattern:"))
-rows = user
-columns = user
-for i in range(1, rows + 1):
-  # Outer loop controls the number of rows
-  for j in range(1, columns + 1):
-    # Inner loop prints asterisks for each row
-    print("*", end="")
-  print()  # Move to a new line after each row of asterisks
+size = int(input("Enter the size of the pattern: "))
+
+# Initialize the row counter for the while loop
+row = 0
+
+# Outer loop for rows
+while row < size:
+    # Inner loop for columns (using for loop)
+    for col in range(size):
+        print("*", end="")  # Print asterisk without moving to the next line
+    print()  # Move to the next row (new line)
+    row += 1
