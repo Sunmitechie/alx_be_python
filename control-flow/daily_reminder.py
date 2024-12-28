@@ -18,4 +18,4 @@ match priority:
             message += "Consider completing it when you have free time."
         else:
             print("Invalid time-bound input.")
-print(f"\nReminder:", message)
+print(f"\nReminder: {message}")
