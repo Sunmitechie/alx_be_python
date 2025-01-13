@@ -1,48 +1,23 @@
-def display_menu():
-    print(f"Shopping List Manager")
-    print("1. Add item")
-    print("2. Remove item")
-    print("3. View list")
-    print("4. Exit")
+from datetime import datetime, timedelta
 
-def add_item(shopping_list):
-    item = input("Enter the item to add: ").strip()
-    shopping_list.append(item)
-    print(f"'{item}' has been added to the shopping list.")
+def display_current_datetime():
+    current_date = datetime.now()
+    formatted_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
+    print(f"Current date and time: {formatted_date}")
 
-def remove_item(shopping_list):
-    item = input("Enter the item to remove: ").strip()
-    if item in shopping_list:
-        shopping_list.remove(item)
-        print(f"'{item}' has been removed from the shopping list.")
-    else:
-        print(f"'{item}' not found in the shopping list.")
-
-def view_list(shopping_list):
-    if shopping_list:
-        print("\nCurrent Shopping List:")
-        for item in shopping_list:
-            print(f"- {item}")
-    else:
-        print("\nThe shopping list is empty.")
+def calculate_future_date():
+    try:
+        days_to_add = int(input("Enter the number of days to add: "))
+        current_date = datetime.now()
+        future_date = current_date + timedelta(days=days_to_add)
+        formatted_future_date = future_date.strftime("%Y-%m-%d")
+        print(f"Future date after {days_to_add} days: {formatted_future_date}")
+    except ValueError:
+        print("Invalid input. Please enter an integer value for the number of days.")
 
 def main():
-    shopping_list = []
-    while True:
-        display_menu()
-        choice = input("Choose an option (1-4): ").strip()
-        
-        if choice == '1':
-            add_item(shopping_list)
-        elif choice == '2':
-            remove_item(shopping_list)
-        elif choice == '3':
-            view_list(shopping_list)
-        elif choice == '4':
-            print("Exiting the Shopping List Manager. Goodbye!")
-            break
-        else:
-            print("Invalid choice. Please select a valid option (1-4).")
+    display_current_datetime()
+    calculate_future_date()
 
 if __name__ == "__main__":
     main()
