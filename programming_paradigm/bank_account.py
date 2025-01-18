@@ -12,9 +12,7 @@ class BankAccount:
                    return False
        def display_balance(self):
              return ["Current Balance:"], {self.account_balance}
-
-
-# main-0.py
+# main.py
 import sys
 from bank_account import BankAccount 
 def main():
