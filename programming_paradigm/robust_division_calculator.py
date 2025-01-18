@@ -15,7 +15,7 @@ def main():
      denominator = input("Enter the denominator: ")
      result = safe_divide(numerator, denominator)
      if result is not None:
-          print(f"Result: {result}")
+          print(f"The result of divison is {result}")
 
 def main():
     if len(sys.argv) != 3:
