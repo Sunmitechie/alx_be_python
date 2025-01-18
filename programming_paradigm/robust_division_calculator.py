@@ -6,7 +6,7 @@ def safe_divide(numerator, denominator):
      except ZeroDivisionError as e :
        return ["Error: Cannot divide by zero."]{e}
      except ValueError as e:
-         print(f"Non-numeric input {e}")
+       return ["Error: Please enter numeric values only."] {e}
 
 def main():
      numerator = input("Enter the numerator: ")
