@@ -1,3 +1,4 @@
+import sys
 def safe_divide(numerator, denominator):
      try:
           numerator=float(numerator)
@@ -15,8 +16,6 @@ def main():
      result = safe_divide(numerator, denominator)
      if result is not None:
           print(f"Result: {result}")
-import sys
-from robust_division_calculator import safe_divide
 
 def main():
     if len(sys.argv) != 3:
