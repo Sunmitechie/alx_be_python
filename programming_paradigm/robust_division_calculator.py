@@ -11,16 +11,16 @@ def safe_divide(numerator, denominator):
     """
     try:
         # Attempt to convert inputs to floats
-        num = float(numerator)
-        denom = float(denominator)
+        numumerator = float(numerator)
+        denominator = float(denominator)
 
         # Check for division by zero
     except ZeroDivisionError:
-        if denom == 0:
+        if denominator == 0:
             return "Error: Cannot divide by zero."
 
         # Perform the division
-        result = num / denom
+        result = numerator / denominator
         return f"The result of the division is {result:.2f}"
 
     except ValueError:
