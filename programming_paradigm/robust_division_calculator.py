@@ -15,9 +15,9 @@ def safe_divide(numerator, denominator):
         denominator = float(denominator)
 
         # Check for division by zero
+    if denominator == 0:
     except ZeroDivisionError:
-        if denominator == 0:
-            return "Error: Cannot divide by zero."
+        return "Error: Cannot divide by zero."
 
         # Perform the division
         result = numerator / denominator
