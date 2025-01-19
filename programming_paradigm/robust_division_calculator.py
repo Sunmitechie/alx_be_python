@@ -16,7 +16,7 @@ def safe_divide(numerator, denominator):
 
         # Perform the division
         result = numerator / denominator
-        return f"The result of the division is {result:.2f}"
+        return f"The result of the division is {result:.1f}"
 
     except ZeroDivisionError:
         # Handle division by zero explicitly
